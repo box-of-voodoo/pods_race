@@ -38,7 +38,7 @@ class Pod:
                   self.y+self.radius*m.sin(add_angle(self.a, m.pi*5/4)))
         return [point1, point2, point3]
 
-    def next_turn(self, x, y, angle, shield=False):
+    def update(self, x, y, angle, shield=False):
         self.x = x
         self.y = y
         self.a = angle
