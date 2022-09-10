@@ -45,6 +45,7 @@ class Pod:
         self.id = next(self.id_iter)
 
         self.thurst = 0
+        self.target = [None,None]
         self.angle = angle
         self.position = np.array(position, np.float64)
         self.speed = np.array([0.0, 0.0])
@@ -78,6 +79,7 @@ class Pod:
         self.angle = (2*pi + self.angle) % (pi*2)
 
     def move_pod(self, dest, command, t=1):
+        self.target = dest
         dest = np.array(dest)
         if self.shield_count:
             self.shield_count += 1

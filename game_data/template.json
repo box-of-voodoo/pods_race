@@ -41,7 +41,9 @@
                     "speed_x": 40,
                     "speed_y": 40,
                     "thurst": 100,
-                    "shield": false
+                    "shield": false,
+                    "target_x":1000,
+                    "target_y":1000
                 }
             ]
         }

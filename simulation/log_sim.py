@@ -38,7 +38,9 @@ class LogSim:
         turn_data = {"turn": sim.turns, "pods": []}
         for pod in sim.pods:
             pod_data = {"id": pod.id, "x": pod.position[0], "y": pod.position[1], "angle": pod.angle,
-                        "speed_x": pod.speed[0], "speed_y": pod.speed[1], "thurst": pod.thurst, "shield": pod.shield_count == 1}
+                        "speed_x": pod.speed[0], "speed_y": pod.speed[1],
+                        "thurst": pod.thurst, "shield": pod.shield_count == 1,
+                        "target_x": pod.target[0], "target_y": pod.target[1]}
             turn_data["pods"].append(pod_data)
         self.data["run_data"].append(turn_data)
 
